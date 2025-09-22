@@ -13,7 +13,7 @@ const SAMPLE_ITEMS = [
 //     { id: 2, name: "Banana", price: 5, qty: 1 },
 // ];
 
-// const cart = emptyCart;
+
 
 export default function Prac1() {
 
@@ -39,12 +39,17 @@ export default function Prac1() {
         if (qty <= 0) {
             return removeItem(id)
         }
-        setCart((prev) => prev.map((p) => (p.id === id) ? { ...p, qty: qty } : p))
+        return setCart((prev) => prev.map((p) => (p.id === id ? { ...p, qty: qty } : p)))
     }
 
+    const clearCart = () => {
+        setCart([])
+        setCoupon('')
+        setAppliedCoupon(null)
+    }
 
     const subtotal = cart.reduce((s, it) => s + it.price * it.qty, 0)
-    const discount = appliedCoupon === 'SAVE10' ? Math.round(subtotal * 0.1) : 0;
+    const discount = appliedCoupon === "SAVE10" ? Math.round(subtotal * 0.1) : 0
     const total = subtotal - discount;
 
     const applyCoupon = () => {
@@ -145,7 +150,7 @@ export default function Prac1() {
             </div>
 
             <div className="mt-4 flex gap-2">
-                <button type="button" className="flex-1 border rounded px-3 py-2">Clear</button>
+                <button onClick={clearCart} type="button" className="flex-1 border rounded px-3 py-2">Clear</button>
                 <button type="button" className="flex-1 bg-green-600 text-white rounded px-3 py-2" onClick={() => toast.success(`Checkout ₹${total}`)} disabled={cart.length === 0}>
                     Checkout
                 </button>

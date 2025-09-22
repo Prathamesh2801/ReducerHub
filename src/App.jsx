@@ -7,6 +7,7 @@ import FormReducer_R from './components/Shop/FormState_R'
 import FormState_S from './components/Shop/FormState_S'
 import Prac1 from './components/Practice/Prac1'
 import { Toaster } from 'react-hot-toast'
+import Prac2_R from './components/Practice/Prac2_R'
 export default function App() {
   return (
     <BrowserRouter>
@@ -26,6 +27,7 @@ export default function App() {
         <Route path='/rcart' element={<ManageCart_R />} />
 
         <Route path='/p1' element={<Prac1 />} />
+        <Route path='/p2' element={<Prac2_R />} />
 
 
 
