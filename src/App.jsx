@@ -5,9 +5,9 @@ import Counter_S from './components/Shop/Counter_S'
 import Counter_R from './components/Shop/Counter_R'
 import FormReducer_R from './components/Shop/FormState_R'
 import FormState_S from './components/Shop/FormState_S'
-import Prac1 from './components/Practice/Prac1'
 import { Toaster } from 'react-hot-toast'
-import Prac2_R from './components/Practice/Prac2_R'
+import Prac1 from './components/Plain/Prac1'
+import Prac2_R from './components/Plain/Prac2_R'
 export default function App() {
   return (
     <BrowserRouter>

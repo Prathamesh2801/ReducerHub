@@ -14,7 +14,7 @@ const cart = emptyCart;
 const appliedCoupon = null;
 const coupon = "";
 
-export default function ManageCart_R_UI() {
+export default function Prac2_R() {
   const subtotal = 0
   const discount = 0
   const total = subtotal - discount;

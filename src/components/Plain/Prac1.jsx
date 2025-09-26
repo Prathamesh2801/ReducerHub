@@ -19,7 +19,7 @@ export default function Prac1() {
     const total = subtotal - discount;
 
     return (
-        <div className="bg-white mx-auto shadow rounded p-4 w-full md:w-[480px]">
+        <div className="bg-white mx-auto shadow-2xl mt-20 rounded p-4 w-full md:w-[480px]">
             <h3 className="text-lg font-semibold mb-3">🛒 Cart (UI-only)</h3>
 
             <div className="grid grid-cols-3 gap-2 mb-4">
